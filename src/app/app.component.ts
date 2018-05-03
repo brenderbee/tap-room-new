@@ -23,4 +23,8 @@ export class AppComponent {
   finishedEditing() {
     this.selectedKeg = null;
   }
+
+  sellPint(clickedKeg: Keg) {
+    clickedKeg.pints -= 1;
+  }
 }
