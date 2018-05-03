@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" *ngIf="childSelectedKeg">
   <div class="card-header">
     <h4 class="card-title">{{childSelectedKeg.name}}</h4>
   </div>
@@ -15,4 +15,5 @@
       <label>Enter ABV Name:</label>
       <input [(ngModel)]="childSelectedKeg.abv" class="form-control">
     </div>
+    <button class="btn btn-warning btn-lg" (click)="clickedFinishedEditing()">Done</button>
 </div>

@@ -8,5 +8,9 @@ import { Keg } from '../models/keg.model';
 })
 export class EditKegComponent {
     @Input() childSelectedKeg: Keg;
-
+    @Output() clickedDone = new EventEmitter();
+    
+    clickedFinishedEditing() {
+      this.clickedDone.emit();
+    }
 }
