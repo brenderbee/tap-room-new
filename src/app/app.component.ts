@@ -27,4 +27,8 @@ export class AppComponent {
   sellPint(clickedKeg: Keg) {
     clickedKeg.pints -= 1;
   }
+
+  sellGrowler(clickedKeg: Keg) {
+    clickedKeg.pints -= 4;
+  }
 }

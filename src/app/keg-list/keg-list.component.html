@@ -3,9 +3,11 @@
     <h4 class="card-title">{{currentKeg.name}}</h4>
   </div>
   <div class="card-body">
-    <h5>{{currentKeg.pints}} pints left</h5>
+    <h5 [class]="warningColor(currentKeg)">{{currentKeg.pints}} pints left</h5>
     <p>{{currentKeg.brewery}}</p>
     <p>{{currentKeg.abv}}</p>
     <button (click)="editButtonClicked(currentKeg)" class="btn btn-success" name="button">Edit Keg</button>
     <button class="btn btn-info" (click)="sellPintClicked(currentKeg)">Sell Pint</button>
+    <button class="btn btn-warning" (click)="sellGrowlerClicked(currentKeg)">Sell Growler</button>
+
 </div>
